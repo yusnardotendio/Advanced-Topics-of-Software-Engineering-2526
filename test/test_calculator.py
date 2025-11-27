@@ -60,8 +60,8 @@ class TestCalculator:
 
     def test_absolute(self):
         calc = Calculator()
-        assert calc.negate(-2) == 2
-        assert calc.negate(2) == 2
+        assert calc.absolute(-2) == 2
+        assert calc.absolute(2) == 2
 
     def test_modulo(self):
         calc = Calculator()
@@ -69,5 +69,9 @@ class TestCalculator:
 
     def test_is_even(self):
         calc = Calculator()
-        assert calc.modulo(2) == True
-        assert calc.modulo(3) == False
+        assert calc.is_even(2) == True
+        assert calc.is_even(3) == False
+
+    def test_gcd(self):
+        calc = Calculator()
+        assert calc.gcd(3,4) == 1
