@@ -20,6 +20,11 @@ class TestCalculator:
         calc = Calculator()
         assert calc.divide(10, 1) == 10
 
+    def test_divide_by_zero(self):
+        calc = Calculator()
+        with pytest.raises(ValueError):
+            calc.divide(10, 0)
+
     def test_power(self):
         calc = Calculator()
         assert calc.power(2, 3) == 8
@@ -75,3 +80,8 @@ class TestCalculator:
     def test_gcd(self):
         calc = Calculator()
         assert calc.gcd(3, 4) == 1
+
+    def test_get_stack(self):
+        calc = Calculator()
+        assert calc.add(1, 2) == 3
+        assert calc.get_stack() == [3]
