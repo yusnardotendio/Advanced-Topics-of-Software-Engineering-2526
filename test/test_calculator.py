@@ -52,3 +52,22 @@ class TestCalculator:
         assert calc.get_stack() == []
         calc.add(2, 3)
         assert calc.get_last_result() == 5
+
+    def test_negate(self):
+        calc = Calculator()
+        assert calc.negate(2) == -2
+        assert calc.negate(-2) == 2
+
+    def test_absolute(self):
+        calc = Calculator()
+        assert calc.negate(-2) == 2
+        assert calc.negate(2) == 2
+
+    def test_modulo(self):
+        calc = Calculator()
+        assert calc.modulo(5,2) == 1
+
+    def test_is_even(self):
+        calc = Calculator()
+        assert calc.modulo(2) == True
+        assert calc.modulo(3) == False

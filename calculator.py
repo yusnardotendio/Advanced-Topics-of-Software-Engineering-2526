@@ -43,7 +43,7 @@ class Calculator:
         return result
 
     def factorial(self, a):
-        if type(a) != int:
+        if type(a) is not int:
             raise ValueError("Factorial requires integers.")
         if a < 0:
             raise ValueError("Factorial is only for non-negative integers.")
