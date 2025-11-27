@@ -65,13 +65,13 @@ class TestCalculator:
 
     def test_modulo(self):
         calc = Calculator()
-        assert calc.modulo(5,2) == 1
+        assert calc.modulo(5, 2) == 1
 
     def test_is_even(self):
         calc = Calculator()
-        assert calc.is_even(2) == True
-        assert calc.is_even(3) == False
+        assert calc.is_even(2) is True
+        assert calc.is_even(3) is False
 
     def test_gcd(self):
         calc = Calculator()
-        assert calc.gcd(3,4) == 1
+        assert calc.gcd(3, 4) == 1
